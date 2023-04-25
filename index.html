@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar">
+      <header>
+        <h1>Basics of Javascript</h1>
+        <p>Resumen del video tutorial de Coding Addict</p>
+      </header>
+      <ul class="menu">
+        <li>
+          <a class="nav-link" href="#Variables">Variables</a>
+        </li>
+        <li><a class="nav-link" href="#let,_const,_var">let, const, var</a></li>
+        <li>
+          <a class="nav-link" href="#Comillas_dobles_o_simples"
+            >Comillas dobles o simples</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Concatenación_de_string"
+            >Concatenación de string</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Números">Números</a></li>
+        <li><a class="nav-link" href="#Operadores">Operadores</a></li>
+      </ul>
+    </nav>
+    <!-- end of nav -->
+
+    <main id="main-doc">
+      <!-- section 1 -->
+      <section class="main-section" id="Variables">
+        <header><h2>Variables</h2></header>
+        <p>Es el bloque más básico.</p>
+        <p>Almacenar, acceder, modificar === valores</p>
+        <p>Declarar, asignar operadores, asignar valores.</p>
+        <p>
+          Primero declarar, y asignar valores más tarde, o modifcar valores
+          existentes.
+        </p>
+        <h3>Nombres de las variables:</h3>
+        <li>Pueden contener números, letras, _ guión bajo, $ signo pesos.</li>
+        <li>Deben empezar con letras, _ guión bajo, $ signo pesos.</li>
+        <li>
+          No pueden ser palabras reservadas, ni empezar con números. 
+        <li>Son case sensitive.</li>
+        </li>
+        <li>La convención es usar camelCase o _ guión bajo.</li>
+        <h4>EJEMPLOS:</h4>
+        <pre><code>let name = "john shrimp taco VI"; 
+console.log(name);
+
+let address, zip, state; 
+address = "101 main street"; 
+zip = 60612;
+state = "CA"; 
+console.log(address, zip, state);
+
+name = "fish burrito"; 
+console.log(name);</code></pre>
+      </section>
+      <!-- end of section 1 -->
+
+      <!-- section 2 -->
+      <section class="main-section" id="let,_const,_var">
+        <header><h2>let, const, var</h2></header>
+        <p>
+          var es la manera tradicional de declarar variables (desde que se creó
+          javascript en 1995). Pero en el 2015 salió ES6, y var fue reemplazado
+          por let y const.
+        </p>
+        <p>
+          const es una constante, no se puede reasignar. Y tampoco podemos
+          declararla sin asignarle ningún valor.
+        </p>
+        <p>
+          Una práctica común es asignar todas las variables como const, y luego
+          si es necesario poder cambiarles el valor, se las cambia a let. Pero
+          no es obligación, también podés usar let, y usar const si sabés que es
+          una constante.
+        </p>
+        <h4>EJEMPLOS:</h4>
+        <pre><code>var value = "some value";
+
+let name = "john";
+
+const lastName = "jordan";</code></pre>
+      </section>
+      <!-- end of section 2 -->
+
+      <!-- section 3 -->
+      <section class="main-section" id="Comillas_dobles_o_simples">
+        <header><h2>Comillas dobles o simples</h2></header>
+        <p>Podés usar las comillas que quieras.</p>
+        <p>
+          Pero hay algunos casos que tenes que usar una o la otra. O usar el
+          signo \ (alt-gr º) antes de la comilla ' o ".
+        </p>
+        <p>
+          Y para evitar todo esto se puede usar las comillas backticks ``
+          (apretar dos veces la tecla que está a la derecha de la p).
+        </p>
+        <h4>EJEMPLOS:</h4>
+        <pre><code>const name = "john's courses are the best";
+
+const name = 'john\'s courses are the best';
+
+const saludo = 'hola a "TODOS" mis amigos';</code></pre>
+      </section>
+      <!-- end of section 3 -->
+
+      <!-- section 4 -->
+      <section class="main-section" id="Concatenación_de_string">
+        <header><h2>Concatenación de string</h2></header>
+        <p>combinar valores string</p>
+        <p>
+          Con las comillas backticks `` (apretar dos veces la tecla que está a
+          la derecha de la p) es más fácil, pero lo explica después.
+        </p>
+        <h4>EJEMPLOS:</h4>
+        <pre><code>const name = "john"; 
+const lastName = "smith"; 
+let fullName = name + " " + lastName; 
+console.log("Hello " + fullName);
+
+const website = "google"; 
+const url = "https://www." + website + ".com"; 
+console.log(url);</code></pre>
+      </section>
+      <!-- end of section 4 -->
+
+      <!-- section 5 -->
+      <section class="main-section" id="Números">
+        <header><h2>Números</h2></header>
+        <p>
+          Javascript es Loosely typed. Es decir que no hay que declarar el type
+          a la variable. Javascript lo hace automáticamente basándose en el
+          valor que le pasamos.
+        </p>
+        <p>
+          En la consola, los números aparecen en azul. Y en cambio los strings
+          aparecen en negro. Si recibís un número que viene de data externa, por
+          ejemplo de un imput, puede figurar como un string. En la consola va a
+          estar en negro.
+        </p>
+        <h4>EJEMPLOS:</h4>
+        <pre><code>const entero = 34; 
+const decimal = 2.466; 
+const externalNumber = "2.466"; 
+console.log(entero); 
+console.log(decimal);
+console.log(externalNumber);
+
+const number1 = 30; 
+const number2 = 20; 
+const add = number1 + number2; 
+const sub = number1 - number2; 
+const mult = number1 * number2; 
+const div = number1 / number2; 
+console.log(add);
+console.log(sub); 
+console.log(mult); 
+console.log(div);</code></pre>
+      </section>
+      <!-- end of section 5 -->
+
+      <!-- section 6 -->
+      <section class="main-section" id="Operadores">
+        <header><h2>Operadores</h2></header>
+        <p>
+          Los operadores +=, -=, /=, *=, le suman, o restan, o dividen, o
+          multiplican al valor ya existente en la variable.
+        </p>
+        <p>
+          Los operadores ++, --, le suman 1, o le restan 1, al valor existente
+          en la variable.
+        </p>
+        <p>
+          El operador % (módulo, modulus) devuelve el número restante de una
+          división a números enteros.
+        </p>
+        <h4>EJEMPLOS:</h4>
+        <pre><code>let number = 40; 
+number += 5; 
+console.log(number); // va a ser 45 
+number++; 
+console.log(number); // le suma 1, va a ser 46
+
+const pizzaSlices = 10;
+const people = 3; 
+const amount = pizzaSlices % people; 
+console.log(amount); // queda una porción de pizza</code></pre>
+      </section>
+      <!-- end of section 6 -->
+    </main>
+    <footer>
+      <p>
+        <strong>Basics of Javascript: </strong>Resumen del video tutorial de
+        Coding Addict
+      </p>
+    </footer>
+  </body>
+</html>

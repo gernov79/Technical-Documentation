@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  background-color: rgb(139, 137, 131);
+}
+
+#navbar {
+  width: 100%;
+  background-color: rgb(192, 181, 153);
+}
+
+#navbar header {
+  margin: auto;
+  background-color: rgb(116, 108, 88);
+  border-bottom: solid 2px #444;
+  color: #ffff84;
+}
+
+#navbar header h1 {
+  font-size: 1.125em;
+  text-align: center;
+  letter-spacing: 0.15em;
+  padding-top: 6px;
+}
+
+#navbar header p {
+  font-size: 0.825em;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+#navbar ul {
+  margin: auto;
+  padding: 11px 2em;
+  list-style-type: none;
+  font-size: 1.1em;
+}
+
+#navbar li {
+  margin: 3px 0;
+  background: rgb(248, 255, 215);
+  border-radius: 4px;
+  padding-right: 3px;
+}
+
+#navbar li > a {
+  display: block;
+  overflow: hidden;
+  padding: 3px 1.1em;
+  text-decoration: none;
+  color: #020202;
+}
+
+#navbar li:hover {
+  background-color: #fff;
+}
+
+#main-doc {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 2em 3em;
+  background-color: #fff;
+}
+
+:target {
+  padding-top: 2em;
+}
+
+.main-section {
+  padding-top: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95em;
+  white-space: pre-line;
+}
+
+footer {
+  font-size: 0.825em;
+  text-align: center;
+  padding: 1em 1em 2em;
+  border-top: 1px solid #444;
+  background-color: #fff;
+}
+
+footer strong {
+  display: block;
+}
+
+/*    */
+
+/* For desktop */
+@media (min-width: 815px) {
+  body {
+    position: relative;
+  }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: solid 3px #444;
+    width: 350px;
+    height: 100%;
+  }
+
+  #main-doc {
+    position: absolute;
+    left: 350px;
+    width: calc(100% - 366px);
+    padding: 1em 4em 5em;
+    margin: 16px 16px;
+    box-shadow: 0 0 5px 1px rgb(116, 108, 88);
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  code {
+    font-size: 1em;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 347px;
+    background-color: rgb(192, 181, 153);
+  }
+}
+
+@media (min-width: 1283px) {
+  #main-doc {
+    width: 900px;
+  }
+}
